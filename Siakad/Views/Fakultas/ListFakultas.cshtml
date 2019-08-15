@@ -1,0 +1,23 @@
+﻿<h2>@ViewBag.Judul</h2>
+<table class="table table-striped">
+    <thead>
+    <th> Kode Fakultas </th>
+    <th> Nama Fakultas </th>
+    </thead>
+    <tbody>
+        @foreach (var item in (IEnumerable<Siakad.Models.Fakultas>)ViewBag.ListFakultas)
+        {
+            <tr>
+                <td>@item.KodeFakultas</td>
+                <td>@item.NamaFakultas</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<!--
+@{
+    ViewBag.Title = "ListFakultas";
+}
+
+<h2>ListFakultas</h2>
+    -->
